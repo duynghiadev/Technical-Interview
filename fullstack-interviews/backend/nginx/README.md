@@ -14,9 +14,9 @@ Với mục tiêu của NGINX là tối ưu hóa hiệu xuất, nên nó thườ
 
 ## Mục lục
 
-[### 1. Nginx hoạt động như thế nào?](#1-nginx-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-nh%C6%B0-th%E1%BA%BF-n%C3%A0o)
+[1. Nginx hoạt động như thế nào?](#1-nginx-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-nh%C6%B0-th%E1%BA%BF-n%C3%A0o)
 
-[### 2. Các tính năng của Nginx Server?](#2-c%C3%A1c-t%C3%ADnh-n%C4%83ng-c%E1%BB%A7a-nginx-server)
+[2. Các tính năng của Nginx Server?](#2-c%C3%A1c-t%C3%ADnh-n%C4%83ng-c%E1%BB%A7a-nginx-server)
 
 [3. Sự khác biệt giữa Nginx và Apache?](#3-s%E1%BB%B1-kh%C3%A1c-bi%E1%BB%87t-gi%E1%BB%AFa-nginx-v%C3%A0-apache)
 
@@ -76,21 +76,21 @@ Nginx được phát triển cho các mục đích tối ưu việc sử dụng 
 
 ### 3. Sự khác biệt giữa Nginx và Apache?
 
-| Nginx | Apache |
-|-|-|
-| Là web server dựa trên sự kiện | Là web server dựa trên tiến trình |
-| Tất cả yêu cầu được xử lý đơn luồng | Mỗi luồng xử lý một yêu cầu đơn |
-| Nginx tránh ý tượng tiến trình con | Apache dựa trên tiến trình con |
-| Nginx thiên về tốc độ | Apache thiên về sức mạnh |
-| Nginx tốt hơn khi nói đến mức tiêu thụ bộ nhớ và kết nối | Apache không đạt chuẩn khi nói đến mức tiêu thụ bộ nhớ và kết nối |
-| Nginx tốt hơn khi muốn cân bằng tải | Apache sẽ từ chối các kết nối mới khi lưu lượng đạt đến giới hạn của các tiến trình |
-| Nginx không hỗ trợ hệ điều hành như IBMi và OpenVMS | Apache hỗ trợ nhiều hệ điều hành hơn |
-| Nginx chỉ đi kèm tính năng cốt lỗi | Apache cung cấp nhiều hàm hơn Nginx |
-| Hiệu suất và khả năng mở rộng không phụ thuộc phần cứng | Phụ thuộc phần cứng như CPU hay bộ nhớ |
+| Nginx                                                    | Apache                                                                              |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Là web server dựa trên sự kiện                           | Là web server dựa trên tiến trình                                                   |
+| Tất cả yêu cầu được xử lý đơn luồng                      | Mỗi luồng xử lý một yêu cầu đơn                                                     |
+| Nginx tránh ý tượng tiến trình con                       | Apache dựa trên tiến trình con                                                      |
+| Nginx thiên về tốc độ                                    | Apache thiên về sức mạnh                                                            |
+| Nginx tốt hơn khi nói đến mức tiêu thụ bộ nhớ và kết nối | Apache không đạt chuẩn khi nói đến mức tiêu thụ bộ nhớ và kết nối                   |
+| Nginx tốt hơn khi muốn cân bằng tải                      | Apache sẽ từ chối các kết nối mới khi lưu lượng đạt đến giới hạn của các tiến trình |
+| Nginx không hỗ trợ hệ điều hành như IBMi và OpenVMS      | Apache hỗ trợ nhiều hệ điều hành hơn                                                |
+| Nginx chỉ đi kèm tính năng cốt lỗi                       | Apache cung cấp nhiều hàm hơn Nginx                                                 |
+| Hiệu suất và khả năng mở rộng không phụ thuộc phần cứng  | Phụ thuộc phần cứng như CPU hay bộ nhớ                                              |
 
 ### 4. Nginx xử lý yêu cầu HTTP như thế nào?
 
-Nginx sử dụng react pattern. Event loop chính đợi hệ điều hành báo hiệu một sự kiện sẵn sàng - sao cho dữ liệu có thể truy cập để đọc từ một socket, tại thời điểm đó, nó được đọc vào bộ đệm và được xử lý. Một luồng đơn có thể phục vụ hàng chục nghìn kết nối đồng thời.  
+Nginx sử dụng react pattern. Event loop chính đợi hệ điều hành báo hiệu một sự kiện sẵn sàng - sao cho dữ liệu có thể truy cập để đọc từ một socket, tại thời điểm đó, nó được đọc vào bộ đệm và được xử lý. Một luồng đơn có thể phục vụ hàng chục nghìn kết nối đồng thời.
 
 ### 5. Trong Nginx, làm cách nào để ngăn chặn các yêu cầu xử lý với tên server không xác định?
 
@@ -164,8 +164,8 @@ Vấn đề C10K là do socket mạng không thể xử lý một số lượng 
 
 ### 14. Cách dùng stub_status và sub_filter directives?
 
-* **Stub_status directive:** Chỉ thị này được sử dụng để biết trạng thái hiện tại của Nginx như kết nối đang hoạt động hiện tại, tổng số kết nối được chấp nhận và số lượng kết nối đọc/ghi/ chờ hiện tại được xử lý
-* **Sub_filter directive:** Nó được sử dụng để tìm kiếm và thay thế nội dung theo phản hồi và khắc phục nhanh chóng dữ liệu cũ.
+- **Stub_status directive:** Chỉ thị này được sử dụng để biết trạng thái hiện tại của Nginx như kết nối đang hoạt động hiện tại, tổng số kết nối được chấp nhận và số lượng kết nối đọc/ghi/ chờ hiện tại được xử lý
+- **Sub_filter directive:** Nó được sử dụng để tìm kiếm và thay thế nội dung theo phản hồi và khắc phục nhanh chóng dữ liệu cũ.
 
 ### 15. Giải thích Nginx có hỗ trợ nén yêu cầu lên upstream không?
 
